@@ -1,8 +1,8 @@
 <?php 
 
 require('helpers.php');
-
 require('router.php');
+require('Database.php');
 
 // connect to MySQL database.
 
@@ -22,13 +22,8 @@ require('router.php');
 
 // print_r($person->breathe());
 
-$dsn = "mysql:host=localhost;port=3306;user=root;dbname=myapp;charset=utf8mb4";
-$pdo = new PDO($dsn);
-
-$statement = $pdo->prepare("select * from posts");
-$statement->execute();
-
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+$db = new Database();
+$posts = $db->query("select * from posts")->fetchAll(PDO::FETCH_ASSOC);;
 
 // print_r($posts);
 
