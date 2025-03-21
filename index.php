@@ -1,10 +1,11 @@
 <?php 
 
 require('helpers.php');
-// require('router.php');
 require('Database.php');
+require('router.php');
 
 $config = require('config.php');
+
 
 // connect to MySQL database.
 
@@ -24,13 +25,14 @@ $config = require('config.php');
 
 // print_r($person->breathe());
 
-$query = 'select * from posts where id = :id';
-$id = $_GET['id'];
+$query = 'select * from posts';
+// $id = $_GET['id'];
 
 $db = new Database($config['database']);
-$posts = $db->query($query, [':id' => $id])->fetch();;
+// $posts = $db->query($query, [':id' => $id])->fetch();
+$posts = $db->query($query)->fetchAll();
 
-print_r($posts);
+// print_r($posts);
 die();
 
 foreach ($posts as $post) {
