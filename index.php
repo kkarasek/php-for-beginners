@@ -2,6 +2,7 @@
 
 require('helpers.php');
 require('Database.php');
+require('Response.php');
 require('router.php');
 
 $config = require('config.php');
@@ -30,7 +31,7 @@ $query = 'select * from posts';
 
 $db = new Database($config['database']);
 // $posts = $db->query($query, [':id' => $id])->fetch();
-$posts = $db->query($query)->fetchAll();
+$posts = $db->query($query)->get();
 
 // print_r($posts);
 die();

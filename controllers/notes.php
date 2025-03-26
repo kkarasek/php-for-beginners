@@ -10,7 +10,7 @@ $db = new Database($config['database']);
 
 $pageTitle = "My Notes";
 
-$notes = $db->query('select * from notes where user_id = 2')->fetchAll();
+$notes = $db->query('select * from notes where user_id = 2')->get();
 
 // var_dump($notes);
 // die();
