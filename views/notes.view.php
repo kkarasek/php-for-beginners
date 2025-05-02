@@ -5,11 +5,15 @@
   <h1><?= $pageTitle ?></h1>   
   <ul>
     <?php foreach($notes as $note) : ?>
-      <a href="/note?id=<?= $note['id']?>" class="text-blue-500 hover:text-underline">
+      <a href="/note?id=<?= $note['id']?>">
         <li><?= $note['body'] ?></li>
       </a>
     <?php endforeach; ?>
   </ul>
+
+  <p class="create-note-btn">
+    <a href="/notes/create" >Create Note</a>
+  </p>
 </main>
 
 <?php require('views/partials/footer.php') ?>

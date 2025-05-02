@@ -36,6 +36,34 @@
       .green {
         color: green;
       }
+
+      .create-note-btn {
+        margin-top: 1rem;
+      }
+
+      .create-note-btn:hover {
+        color: blue;
+        text-decoration: underline;
+      }
+
+      .create-note-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .create-note-form > label {
+        margin-bottom: 0.5rem;
+      }
+
+      .create-note-form > textarea {
+        width: 300px;
+        height: 100px;
+      }
+
+      .create-note-form > button {
+        margin-top: 1rem;
+        width: 80px;
+      }
     </style>
   </head>
 
