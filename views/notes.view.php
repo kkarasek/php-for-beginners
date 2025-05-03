@@ -6,7 +6,7 @@
   <ul>
     <?php foreach($notes as $note) : ?>
       <a href="/note?id=<?= $note['id']?>">
-        <li><?= $note['body'] ?></li>
+        <li><?= htmlspecialchars($note['body']) ?></li>
       </a>
     <?php endforeach; ?>
   </ul>
