@@ -57,7 +57,7 @@
     }
 
     .create-note-form>textarea {
-      width: 300px;
+      width: 380px;
       height: 100px;
     }
 
