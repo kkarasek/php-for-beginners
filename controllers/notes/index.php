@@ -1,6 +1,6 @@
 <?php
 
-$config = require('config.php');
+$config = require(basePath('config.php'));
 $db = new Database($config['database']);
 
 // $id = $_GET['id'];
@@ -15,4 +15,7 @@ $notes = $db->query('select * from notes where user_id = 2')->get();
 // var_dump($notes);
 // die();
 
-require "views/notes/index.view.php";
+view("notes/index.view.php", [
+  'pageTitle' => $pageTitle,
+  'notes' => $notes
+]);

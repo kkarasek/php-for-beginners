@@ -1,11 +1,16 @@
-<?php 
+<?php
 
-require('helpers.php');
-require('Database.php');
-require('Response.php');
-require('router.php');
+const BASE_PATH = __DIR__ . '/../';
 
-$config = require('config.php');
+require(BASE_PATH . 'helpers.php');
+
+spl_autoload_register(function($class) {
+  require basePath("Core/{$class}.php");
+});
+
+require(basePath('router.php'));
+
+$config = require(basePath('config.php'));
 
 
 // connect to MySQL database.
@@ -34,10 +39,8 @@ $db = new Database($config['database']);
 $posts = $db->query($query)->get();
 
 // print_r($posts);
-die();
+// die();
 
-foreach ($posts as $post) {
-  echo "<li>{$post['title']}</li>";
-}
-
-
+// foreach ($posts as $post) {
+//   echo "<li>{$post['title']}</li>";
+// }

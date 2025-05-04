@@ -2,4 +2,6 @@
 
 $pageTitle = "Contact Us 📞";
 
-require "views/about.view.php";
+view("contact.view.php", [
+  'pageTitle' => $pageTitle
+]);

@@ -1,5 +1,5 @@
-<?php require('views/partials/head.php') ?>
-<?php require('views/partials/nav.php') ?>
+<?php require(basePath('views/partials/head.php')) ?>
+<?php require(basePath('views/partials/nav.php')) ?>
 <main>
   <h1>Recommended Books</h1>   
   <ul>
@@ -13,4 +13,4 @@
   </ul> 
 </main>
 
-<?php require('views/partials/footer.php') ?>
+<?php require(basePath('views/partials/footer.php')) ?>
