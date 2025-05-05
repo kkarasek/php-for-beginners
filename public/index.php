@@ -2,13 +2,13 @@
 
 const BASE_PATH = __DIR__ . '/../';
 
-require(BASE_PATH . 'helpers.php');
+require(BASE_PATH . 'Core/helpers.php');
 
 spl_autoload_register(function($class) {
   require basePath("Core/{$class}.php");
 });
 
-require(basePath('router.php'));
+require(basePath('Core/router.php'));
 
 $config = require(basePath('config.php'));
 
