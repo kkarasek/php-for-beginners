@@ -1,11 +1,11 @@
 <?php
 
+use Core\Database;
+
 $config = require(basePath('config.php'));
 $db = new Database($config['database']);
 
-
 $id = $_GET['id'];
-
 $pageTitle = "Note {$id}";
 
 $currentUserId = 2;

@@ -1,5 +1,8 @@
 <?php
 
+use Core\Database;
+use Core\Validator;
+
 require(basePath('Core/Validator.php'));
 
 $config = require(basePath('config.php'));
