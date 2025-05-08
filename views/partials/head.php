@@ -73,6 +73,13 @@
     .create-note-form .success-message {
       color: green;
     }
+
+    .delete-note-form{
+      margin-top:2rem;
+    }
+    .delete-note-form>button {
+      color: red;
+    }
   </style>
 </head>
 
