@@ -8,7 +8,7 @@ $db = new Database($config['database']);
 $id = $_GET['id'];
 $pageTitle = "Note {$id}";
 
-$currentUserId = 25;
+$currentUserId = 2;
 
 // var_dump($_GET['id']);
 // die();

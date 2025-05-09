@@ -14,6 +14,13 @@ function authorize($condition, $status = Response::FORBIDDEN)
   }
 }
 
+function abort($statusCode = 404)
+{
+  http_response_code($statusCode);
+  require basePath("views/{$statusCode}.php");
+  die();
+}
+
 function basePath($path)
 {
   return BASE_PATH . $path;
