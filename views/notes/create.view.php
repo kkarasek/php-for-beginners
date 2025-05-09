@@ -3,7 +3,7 @@
 
 <main>
   <h1><?= $pageTitle ?></h1>
-  <form class="create-note-form" method="post">
+  <form class="create-note-form" method="post" action="/notes">
     <label for="body">Description</label>
     <textarea id="body" name="body" required><?= $_POST['body'] ?? '' ?></textarea>
 
