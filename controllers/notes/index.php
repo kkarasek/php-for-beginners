@@ -1,12 +1,16 @@
 <?php
 
+use Core\App;
 use Core\Database;
 
-$config = require(basePath('config.php'));
-$db = new Database($config['database']);
+// Database usage before the implementation of a custom Service Container
+// $config = require(basePath('config.php'));
+// $db = new Database($config['database']);
+
+// $db = App::container()->resolve(Database::class);
+$db = App::resolve(Database::class);
 
 // $id = $_GET['id'];
-
 // var_dump($id);
 // die();
 

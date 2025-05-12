@@ -6,9 +6,9 @@ class Container
 {
   protected $bindings = [];
 
-  public function bind($key, $builder)
+  public function bind($key, $resolver)
   {
-    $this->bindings[$key] = $builder;
+    $this->bindings[$key] = $resolver;
   }
 
   public function resolve($key)

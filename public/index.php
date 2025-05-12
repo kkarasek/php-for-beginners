@@ -1,5 +1,6 @@
 <?php
 
+use Core\App;
 use Core\Database;
 use Core\Router;
 
@@ -23,9 +24,6 @@ $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
 
 $router->route($uri, $method);
 
-$config = require(basePath('config.php'));
-
-
 // connect to MySQL database.
 
 // class Person {
@@ -47,7 +45,12 @@ $config = require(basePath('config.php'));
 $query = 'select * from posts';
 // $id = $_GET['id'];
 
-$db = new Database($config['database']);
+// $config = require(basePath('config.php'));
+// $db = new Database($config['database']);
+
+// $db = App::container()->resolve(Database::class);
+$db = App::resolve(Database::class);
+
 // $posts = $db->query($query, [':id' => $id])->fetch();
 $posts = $db->query($query)->get();
 
