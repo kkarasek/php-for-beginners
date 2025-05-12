@@ -13,6 +13,5 @@ $container->bind("Core\Database", function () {
 
 $db = $container->resolve("Core\Database");
 
-var_dump($db);
-die();
+dd($db);
 // $container->resolve('dadsaddasda');
