@@ -74,11 +74,45 @@
       color: green;
     }
 
-    .delete-note-form{
-      margin-top:2rem;
+    .delete-note-form {
+      margin-top: 2rem;
     }
+
     .delete-note-form>button {
       color: red;
+    }
+
+    .edit-note-btn {
+      margin-top: 1rem;
+      color: green;
+    }
+
+    .edit-note-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .edit-note-form>label {
+      margin-bottom: 0.5rem;
+    }
+
+    .edit-note-form>textarea {
+      width: 380px;
+      height: 100px;
+    }
+
+    .edit-note-form>div {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .edit-note-form .error-message {
+      color: red;
+    }
+
+    .edit-note-form .success-message {
+      color: green;
     }
   </style>
 </head>
