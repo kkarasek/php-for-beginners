@@ -8,7 +8,7 @@ $db = App::resolve(Database::class);
 
 $pageTitle = 'Edit Note';
 
-$id = $_POST['id']; // Everything except for GET and POST runs through POST + hidden inputs whose values are accessible via name attribute
+$id = $_POST['id'];
 $body = $_POST['body'];
 
 $currentUserId = 2;
@@ -21,7 +21,7 @@ $note = $db->query(
 
 authorize($note['user_id'] === $currentUserId);
 
-if (!Validator::string($_POST['body'], 1, 250)) {
+if (!Validator::string($body, 1, 250)) {
   $errors['body'] = 'A body of no more than 250 characters is required!';
 }
 
