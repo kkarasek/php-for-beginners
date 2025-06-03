@@ -66,7 +66,8 @@
       width: 80px;
     }
 
-    .create-note-form .error-message {
+    .create-note-form  .error-message, 
+    .registration-form .error-message {
       color: red;
     }
 
@@ -113,6 +114,40 @@
 
     .edit-note-form .success-message {
       color: green;
+    }
+
+    .registration-form-group {
+      margin-bottom: 15px;
+    }
+
+    .registration-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .registration-form input[type="text"],
+    .registration-form input[type="email"],
+    .registration-form input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .registration-submit-btn {
+      background-color: #007cba;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .registration-submit-btn:hover {
+      background-color: #005a87;
     }
   </style>
 </head>
