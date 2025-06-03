@@ -1,7 +1,5 @@
 <?php 
 
-$_SESSION['name'] = 'Kuba';
-
 $books = [
   [
     'title' => 'The Plague',

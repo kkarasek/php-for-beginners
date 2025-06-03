@@ -43,8 +43,6 @@ if ($user) {
         ]
     );
 
-    session_start();
-    
     $_SESSION["user"] = [
         "email" => $email,
     ];

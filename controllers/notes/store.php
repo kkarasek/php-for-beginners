@@ -15,7 +15,7 @@ if (!Validator::string($_POST['body'], 1, 250)) {
 }
 
 if (empty($errors)) {
-  $db->query('INSERT INTO notes (body, user_id) VALUES(:body, :user_id)', [
+  $db->query('INSERT INTO notes (body, user_id) VALUES (:body, :user_id)', [
     'body' => $_POST['body'],
     'user_id' => 2
   ]);

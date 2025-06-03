@@ -22,11 +22,15 @@
       background-color: rgb(203 213 225);
       width: 100%;
       margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 20px;
 
       >ul {
         list-style: none;
         display: flex;
-        gap: 10px;
+        gap: 10px
       }
     }
 
@@ -66,7 +70,7 @@
       width: 80px;
     }
 
-    .create-note-form  .error-message, 
+    .create-note-form .error-message,
     .registration-form .error-message {
       color: red;
     }
