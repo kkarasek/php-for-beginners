@@ -4,8 +4,11 @@ use Core\Response;
 
 function dd($value)
 {
-    var_dump($value);
-    die();
+  echo "<pre>";
+  var_dump($value);
+  echo "</pre>";
+
+  die();
 }
 
 function urlIs($value)
