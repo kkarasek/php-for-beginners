@@ -5,11 +5,12 @@
     <li><a href="/notes">Notes</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
-  <div>
+  <div class="auth-links">
     <?php if ($_SESSION['user'] ?? false) : ?>
-      Hello Kuba!
+      <?= $_SESSION['user']['email'] ?>
     <?php else : ?>
       <a href="/register">Register</a>
+      <a href="/login">Login</a>
     <?php endif; ?>
   </div>
 </nav>

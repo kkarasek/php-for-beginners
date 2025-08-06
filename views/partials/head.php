@@ -34,6 +34,12 @@
       }
     }
 
+    .auth-links {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
     .pink {
       color: #fab;
     }
