@@ -4,7 +4,7 @@
 <main>
   <h1 class="login-title">Log In</h1>
   <div class="login-form-wrapper">
-    <form method="POST" action="/login" class="registration-form">
+    <form method="POST" action="/sessions" class="registration-form">
 
       <div class="registration-form-group">
         <label for="email">Email:</label>
