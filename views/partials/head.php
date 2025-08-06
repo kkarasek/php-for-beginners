@@ -159,6 +159,14 @@
     .registration-submit-btn:hover {
       background-color: #005a87;
     }
+
+    .login-title {
+      width: 380px;
+      text-align: center;
+    }
+    .login-form-wrapper {
+      width: 380px;
+    }
   </style>
 </head>
 
