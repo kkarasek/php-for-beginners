@@ -43,9 +43,9 @@ if ($user) {
         ]
     );
 
-    $_SESSION["user"] = [
-        "email" => $email,
-    ];
+    login([
+        'email' => $email
+    ]);
 
     header("location: /");
     exit();
