@@ -167,6 +167,17 @@
     .login-form-wrapper {
       width: 380px;
     }
+
+    .logout-btn {
+      background: none;
+      border: none;
+      color: #ef4444;
+      cursor: pointer;
+      padding: 0;
+      font-size: inherit;
+      font-family: inherit;
+      text-decoration: underline;
+    }
   </style>
 </head>
 
