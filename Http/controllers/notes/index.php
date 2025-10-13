@@ -14,14 +14,14 @@ $db = App::resolve(Database::class);
 // var_dump($id);
 // die();
 
-$pageTitle = "My Notes";
+$pageTitle = 'My Notes';
 
-$notes = $db->query('select * from notes where user_id = 2')->get();
+$notes = $db->query('SELECT * FROM notes WHERE user_id = 2')->get();
 
 // var_dump($notes);
 // die();
 
-view("notes/index.view.php", [
+view('notes/index.view.php', [
   'pageTitle' => $pageTitle,
   'notes' => $notes
 ]);

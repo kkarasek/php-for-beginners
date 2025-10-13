@@ -10,27 +10,27 @@ class Router
 
     public function get($uri, $controller)
     {
-        return $this->add("GET", $uri, $controller);
+        return $this->add('GET', $uri, $controller);
     }
 
     public function post($uri, $controller)
     {
-        return $this->add("POST", $uri, $controller);
+        return $this->add('POST', $uri, $controller);
     }
 
     public function delete($uri, $controller)
     {
-        return $this->add("DELETE", $uri, $controller);
+        return $this->add('DELETE', $uri, $controller);
     }
 
     public function patch($uri, $controller)
     {
-        return $this->add("PATCH", $uri, $controller);
+        return $this->add('PATCH', $uri, $controller);
     }
 
     public function put($uri, $controller)
     {
-        return $this->add("PUT", $uri, $controller);
+        return $this->add('PUT', $uri, $controller);
     }
 
     public function only($key)
@@ -40,7 +40,7 @@ class Router
         //  So /notes gets 'auth' middleware and /register gets 'guest' middleware - they're completely separate operations on different routes.
 
         // count($this->routes) - 1 equals N (the route we just added)
-        $this->routes[count($this->routes) - 1]["middleware"] = $key;
+        $this->routes[count($this->routes) - 1]['middleware'] = $key;
 
         return $this;
     }
@@ -49,12 +49,12 @@ class Router
     {
         foreach ($this->routes as $route) {
             if (
-                $route["uri"] === $uri &&
-                $route["method"] === strtoupper($method)
+                $route['uri'] === $uri &&
+                $route['method'] === strtoupper($method)
             ) {
-                (new Middleware())->resolve($route["middleware"]);
+                (new Middleware())->resolve($route['middleware']);
 
-                return require basePath('Http/controllers/' . $route["controller"]);
+                return require basePath('Http/controllers/' . $route['controller']);
             }
         }
         $this->abort();
@@ -63,10 +63,10 @@ class Router
     protected function add($method, $uri, $controller)
     {
         $this->routes[] = [
-            "uri" => $uri,
-            "controller" => $controller,
-            "method" => $method,
-            "middleware" => null,
+            'uri' => $uri,
+            'controller' => $controller,
+            'method' => $method,
+            'middleware' => null,
         ];
         // Or use alternative syntax
         // $this->routes[] = compact('method', 'uri', 'controller');

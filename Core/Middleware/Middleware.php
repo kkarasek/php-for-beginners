@@ -5,8 +5,8 @@ namespace Core\Middleware;
 class Middleware
 {
     public const MAP = [
-        "guest" => Guest::class,
-        "auth" => Auth::class,
+        'guest' => Guest::class,
+        'auth' => Auth::class,
     ];
 
     public function resolve($key)

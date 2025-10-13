@@ -3,24 +3,24 @@
 use Core\Authenticator;
 use Http\Forms\LoginForm;
 
-$email = $_POST["email"];
-$password = $_POST["password"];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
 $form = new LoginForm($email, $password);
 
 if ($form->validate($email, $password)) {
     if ((new Authenticator())->attempt($email, $password)) {
-        redirect("/");
+        redirect('/');
     }
     
     $form->error(
-        "email",
-        "No matching account found for that email address and password."
+        'email',
+        'No matching account found for that email address and password.'
     );
 }
 
-view("sessions/create.view.php", [
-    "errors" => $form->errors(),
+view('sessions/create.view.php', [
+    'errors' => $form->errors(),
 ]);
 
 

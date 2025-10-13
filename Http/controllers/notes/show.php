@@ -11,13 +11,13 @@ $pageTitle = "Note {$id}";
 $currentUserId = 2;
 
 $note = $db->query( 
-  'select * from notes where id = :id',
+  'SELECT * FROM notes WHERE id = :id',
   ['id' => $id]
 )->findOrFail();
 
 authorize($note['user_id'] === $currentUserId);
 
-view("notes/show.view.php", [
+view('notes/show.view.php', [
   'pageTitle' => $pageTitle,
   'note' => $note
 ]);

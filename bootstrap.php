@@ -18,8 +18,8 @@ $container = new Container();
 
 App::setContainer($container);
 
-App::bind("Core\Database", function () {
-  $config = require basePath("config.php");
+App::bind('Core\Database', function () {
+  $config = require basePath('config.php');
 
-  return new Database($config["database"]);
+  return new Database($config['database']);
 });

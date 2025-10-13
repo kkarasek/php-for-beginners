@@ -6,7 +6,7 @@ use Core\Validator;
 
 $db = App::resolve(Database::class);
 
-$pageTitle = "Create a Note";
+$pageTitle = 'Create a Note';
 $errors = [];
 $success = ''; 
 
@@ -23,7 +23,7 @@ if (empty($errors)) {
   $success = 'Note created successfully!';
 }
 
-return view("notes/create.view.php", [
+return view('notes/create.view.php', [
   'pageTitle' => $pageTitle,
   'errors' => $errors,
   'success' => $success

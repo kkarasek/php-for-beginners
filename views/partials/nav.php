@@ -1,6 +1,6 @@
 <nav>
   <ul>
-    <li><a href="/" class=<?= (urlIs('/') ? 'pink' : 'green') ?>>Home</a></li>
+    <li><a href="/" class="<?= (urlIs('/') ? 'pink' : 'green') ?>">Home</a></li>
     <li><a href="/about">About</a></li>
     <?php if ($_SESSION['user'] ?? false) : ?>
       <li><a href="/notes">Notes</a></li>

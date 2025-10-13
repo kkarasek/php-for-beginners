@@ -9,15 +9,15 @@ class Authenticator
         $db = App::resolve(Database::class);
 
         $user = $db
-            ->query("SELECT * FROM users WHERE email = :email", [
-                "email" => $email,
+            ->query('SELECT * FROM users WHERE email = :email', [
+                'email' => $email,
             ])
             ->find();
 
         if ($user) {
-            if (password_verify($password, $user["password"])) {
+            if (password_verify($password, $user['password'])) {
                 $this->login([
-                    "email" => $email,
+                    'email' => $email,
                 ]);
 
                 return true;
@@ -29,8 +29,8 @@ class Authenticator
 
     public function login($user)
     {
-        $_SESSION["user"] = [
-            "email" => $user["email"],
+        $_SESSION['user'] = [
+            'email' => $user['email'],
         ];
 
         session_regenerate_id(true);
@@ -43,11 +43,11 @@ class Authenticator
 
         $params = session_get_cookie_params();
         setcookie(
-            "PHPSESSID",
-            "",
+            'PHPSESSID',
+            '',
             time() - 3600,
-            $params["path"],
-            $params["domain"]
+            $params['path'],
+            $params['domain']
         ); // time() - 3600 sets the expiration time to 1 hour in the past, which resulsts in the instant deletion of a cookie
     }
 }

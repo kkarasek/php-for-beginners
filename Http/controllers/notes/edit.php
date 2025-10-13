@@ -12,7 +12,7 @@ $pageTitle = 'Edit Note';
 $currentUserId = 2;
 
 $note = $db->query( 
-  'select * from notes where id = :id',
+  'SELECT * FROM notes WHERE id = :id',
   ['id' => $id]
 )->findOrFail();
 

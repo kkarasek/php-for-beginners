@@ -15,7 +15,7 @@ $currentUserId = 2;
 $errors = [];
 
 $note = $db->query(
-  'select * from notes where id = :id',
+  'SELECT * FROM notes WHERE id = :id',
   ['id' => $id]
 )->findOrFail();
 
@@ -26,14 +26,14 @@ if (!Validator::string($body, 1, 250)) {
 }
 
 if (count($errors)) {
-  return view("notes/edit.view.php", [
+  return view('notes/edit.view.php', [
     'pageTitle' => $pageTitle,
     'errors' => $errors,
     'note' => $note
   ]); 
 }
 
-$db->query('update notes set body = :body where id = :id', [
+$db->query('UPDATE notes SET body = :body WHERE id = :id', [
   'body' => $body,
   'id' => $id
 ]);

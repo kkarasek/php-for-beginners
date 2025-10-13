@@ -13,7 +13,7 @@ function dd($value)
 
 function urlIs($value)
 {
-    return $_SERVER["REQUEST_URI"] === $value;
+    return $_SERVER['REQUEST_URI'] === $value;
 }
 
 function authorize($condition, $status = Response::FORBIDDEN)
@@ -38,7 +38,7 @@ function basePath($path)
 function view($path, $attributes = [])
 {
     extract($attributes);
-    require basePath("views/" . $path);
+    require basePath('views/' . $path);
 }
 
 function redirect($path)

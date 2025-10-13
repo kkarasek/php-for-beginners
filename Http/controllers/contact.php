@@ -1,7 +1,7 @@
 <?php
 
-$pageTitle = "Contact Us 📞";
+$pageTitle = 'Contact Us 📞';
 
-view("contact.view.php", [
+view('contact.view.php', [
   'pageTitle' => $pageTitle
 ]);

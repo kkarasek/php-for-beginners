@@ -1,6 +1,6 @@
 <?php
 
-$pageTitle = "About Page";
+$pageTitle = 'About Page';
 
 view('about.view.php', [
   'pageTitle' => $pageTitle

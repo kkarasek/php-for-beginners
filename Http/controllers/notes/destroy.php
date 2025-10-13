@@ -11,13 +11,13 @@ $pageTitle = "Note {$id}";
 $currentUserId = 2;
 
 $note = $db->query(
-  'select * from notes where id = :id',
+  'SELECT * FROM notes WHERE id = :id',
   ['id' => $id]
 )->findOrFail();
 
 authorize($note['user_id'] === $currentUserId);
 
-$db->query('DELETE from notes where id = :id', [
+$db->query('DELETE FROM notes WHERE id = :id', [
   'id' => $id
 ]);
 

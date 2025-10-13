@@ -1,8 +1,8 @@
 <?php
 
-$pageTitle = "Create a Note";
+$pageTitle = 'Create a Note';
 
-view("notes/create.view.php", [
+view('notes/create.view.php', [
   'pageTitle' => $pageTitle,
   'errors' => [],
   'success' => ''

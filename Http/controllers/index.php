@@ -43,6 +43,6 @@ function filter($items, $fn) {
 
 $filteredBooks = array_filter($books, fn($book) => $book['year'] < 2000 );
 
-view("index.view.php", [
+view('index.view.php', [
   'filteredBooks' => $filteredBooks
 ]);
