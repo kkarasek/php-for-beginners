@@ -4,16 +4,13 @@ use Core\Router;
 use Core\Session;
 use Core\ValidationException;
 
-session_start();
-
 const BASE_PATH = __DIR__ . '/../';
 
-require BASE_PATH . 'Core/helpers.php';
+require BASE_PATH . 'vendor/autoload.php';
 
-spl_autoload_register(function($class) {
-  $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-  require basePath("{$class}.php");
-});
+session_start();
+
+require BASE_PATH . 'Core/helpers.php';
 
 require basePath('bootstrap.php');
 
