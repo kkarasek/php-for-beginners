@@ -1,10 +1,25 @@
 {
     "name": "kubakarasek/php-intro",
-    "require": {},
+    "require": {
+        "illuminate/collections": "^12.45"
+    },
     "autoload": {
         "psr-4": {
             "Core\\": "Core/",
             "Http\\": "Http/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.3"
     }
 }
